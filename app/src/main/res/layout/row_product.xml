@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="180dp"
+    android:layout_width="wrap_content"
+    android:layout_margin="5dp"
+    android:background="#FFFFFF"
+    android:layout_weight="1"
     android:layout_height="wrap_content">
+
     <RelativeLayout
+        android:layout_weight="1"
         android:background="#fff"
-        android:layout_width="170dp"
-        android:layout_margin="5dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/anh_SanPham"
             android:src="@drawable/sp7"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
-            android:layout_height="170dp"/>
+            android:layout_height="190dp"/>
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="170dp" />
+            android:layout_height="190dp" />
 
         <TextView
             android:id="@+id/tv_ThongTinSP"
@@ -62,4 +67,5 @@
             android:layout_alignBottom="@id/tv_giakm"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
-</RelativeLayout>
+
+</LinearLayout>

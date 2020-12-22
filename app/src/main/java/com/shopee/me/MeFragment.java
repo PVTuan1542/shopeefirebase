@@ -1,17 +1,12 @@
 package com.shopee.me;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,13 +16,9 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.shopee.CustomSheet;
-import com.shopee.DetailProductActivity;
 import com.shopee.MainActivity;
 import com.shopee.R;
-import com.shopee.chat.ChatActivity;
 import com.shopee.feed.List_Menu;
 
 import java.util.ArrayList;

@@ -1,6 +1,8 @@
 package com.shopee.home;
 
 import android.content.Intent;
+import android.icu.text.DecimalFormat;
+import android.icu.text.NumberFormat;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,6 +21,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,6 +32,9 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.shopee.MainActivity;
 import com.shopee.R;
+import com.shopee.firebasegrid.CategoryViewHolder;
+import com.shopee.firebasegrid.Categoryitem;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
@@ -53,6 +60,11 @@ public class HomeFragment extends Fragment {
     private Timer timer;
     private ImageView imgBarcode;
     private DatabaseReference mData;
+    //grid san pham
+    RecyclerView recyclerView;
+    DatabaseReference databaseReference;
+    FirebaseRecyclerOptions<Categoryitem> options;
+    FirebaseRecyclerAdapter<Categoryitem,CategoryViewHolder> adapter;
 
     ArrayList<Category> listCategories;
     ArrayList<TopSale> listTopSales;
@@ -89,6 +101,8 @@ public class HomeFragment extends Fragment {
 
         initDanhMuc();
 
+        //grid sản phẩm
+        gridProduct(view);
         return view;
     }
 
@@ -386,6 +400,73 @@ public class HomeFragment extends Fragment {
 
         });
         rcv_Category2.setAdapter(mucAdapter);
+    }
+
+    // add grid sản phẩm
+    private void gridProduct(View view){
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.rcv_gridproduct);
+        recyclerView.setHasFixedSize(true);
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Product");
+
+        options = new FirebaseRecyclerOptions.Builder<Categoryitem>()
+                .setQuery(databaseReference, Categoryitem.class).build();
+        adapter = new FirebaseRecyclerAdapter<Categoryitem, CategoryViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull CategoryViewHolder holder, int i, @NonNull Categoryitem model) {
+
+                Picasso.get().load(model.getImg()).into(holder.img, new Callback() {
+                    @Override
+                    public void onSuccess() {
+
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+                        Toast.makeText(getContext(),"Không lấy đc img từ link",Toast.LENGTH_LONG).show();
+                    }
+                });
+                holder.name.setText(model.getName());
+                NumberFormat formatter = new DecimalFormat("#,###");
+
+                holder.tv_giaban.setText( "đ "+formatter.format( Integer.parseInt( model.getGia() ) ));
+                holder.tv_giakm.setText("đ "+formatter.format( Integer.parseInt( model.getGiaKM() ) ));
+            }
+
+            @NonNull
+            @Override
+            public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_product,parent,false);
+
+                return new CategoryViewHolder(view);
+            }
+        };
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        adapter.startListening();
+        recyclerView.setAdapter(adapter);
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        if(adapter != null)
+            adapter.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        if (adapter != null)
+            adapter.stopListening();
+        super.onStop();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(adapter != null)
+            adapter.startListening();
     }
 
 

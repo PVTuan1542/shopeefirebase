@@ -10,4 +10,5 @@
     <string name="search">Quà tặng tết thầy cô</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_maps">Map</string>
+    <string name="all" formatted="false">đ %3d</string>
 </resources>

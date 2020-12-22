@@ -59,8 +59,8 @@ public class AdapterSanPham extends RecyclerView.Adapter<AdapterSanPham.ViewHold
             super(itemView);
             txtThongTinSP = (TextView) itemView.findViewById(R.id.tv_ThongTinSP);
             anh = (ImageView) itemView.findViewById(R.id.anh_SanPham);
-            txtGiaBan = (TextView) itemView.findViewById(R.id.tv_Gia1);
-            txtGiaKhuyenMai = (TextView) itemView.findViewById(R.id.tv_Gia2);
+            txtGiaBan = (TextView) itemView.findViewById(R.id.tv_giaban);
+            txtGiaKhuyenMai = (TextView) itemView.findViewById(R.id.gia_km);
         }
     }
 }

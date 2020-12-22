@@ -312,6 +312,24 @@
                     android:id="@+id/rcv_category2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="GỢI Ý HÔM NAY"
+                    android:textColor="#ee4e2e" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#EFEFEF">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_gridproduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
 
             </LinearLayout>
 

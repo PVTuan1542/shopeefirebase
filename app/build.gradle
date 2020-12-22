@@ -71,6 +71,13 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
 
+    //add library adapter options and firbase recycleview
+    implementation 'com.firebaseui:firebase-ui-database:0.4.0'
+    implementation 'com.firebaseui:firebase-ui-database:4.3.2'
+//add picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
 //tuấn
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
