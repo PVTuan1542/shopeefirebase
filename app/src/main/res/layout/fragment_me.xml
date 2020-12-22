@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    android:id="@+id/container">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/layout1"
+                android:background="@color/orange"
+                android:layout_width="match_parent"
+                android:layout_height="170dp">
+                <ImageView
+                    android:id="@+id/btn_account"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="2dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    app:tint="@color/white"
+                    android:layout_marginRight="100dp"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_account"
+                    android:background="@drawable/circle_border"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:id="@+id/bt_dangKy"
+                    android:text="Đăng ký"
+                    android:textColor="@color/orange"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:background="#fff"
+                    android:layout_marginBottom="20dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:id="@+id/bt_dangNhap"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="16sp"
+                    android:layout_toLeftOf="@id/bt_dangKy"
+                    android:text="Đăng nhập"
+                    android:textColor="@color/orange"
+                    android:gravity="center"
+                    android:layout_width="100dp"
+                    android:background="#fff"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="#fff"
+                android:id="@+id/layout2"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/trang_Chinh"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginTop="4dp"
+                    android:padding="2dp"
+                    android:text="Trang Chính"
+                    android:textAlignment="center"
+                    android:textColor="#0B0101"
+                    android:textSize="13sp"
+                    app:drawableTopCompat="@drawable/trang_chinh" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ma_GiamGia"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:text="Mã giảm giá"
+                    android:layout_marginTop="4dp"
+                    android:textAlignment="center"
+                    android:textColor="#0B0101"
+                    android:textSize="13sp"
+                    app:drawableTopCompat="@drawable/ma_giam_gia"
+                    />
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/freeship"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Freeship 0Đ"
+                    android:textAlignment="center"
+                    android:textColor="#0B0101"
+                    android:textSize="13sp"
+                    app:drawableTopCompat="@drawable/freeship"
+                    />
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/san_Sale"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Săn sale"
+                    android:textAlignment="center"
+                    android:textColor="#0B0101"
+                    android:textSize="13sp"
+                    app:drawableTopCompat="@drawable/sale_tag"
+                    />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/layout2"
+                android:id="@+id/recyclerView_CaNhan"
+                android:background="#DDD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

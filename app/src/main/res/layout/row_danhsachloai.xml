@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/anh_Loai"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/circle_gray_border"
+            android:padding="10dp"
+            android:src="@drawable/sale" />
+
+    <TextView
+        android:id="@+id/tv_Ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anh_Loai"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="VOUCHER"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_MoTa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Ten"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:text="NGẤT NGÂY"
+        android:textColor="#0E0808"
+        android:textSize="8sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Shopee</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_feed">Shopee Feed</string>
+    <string name="title_live">Shopee Live</string>
+    <string name="title_me">Tôi</string>
+    <string name="search">Quà tặng tết thầy cô</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

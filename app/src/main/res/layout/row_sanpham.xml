@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:background="#C80A0A"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="#fff"
+        android:layout_width="170dp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/anh_SanPham"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"/>
+        <TextView
+            android:id="@+id/tv_ThongTinSP"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="#000"
+            android:text="Kính Mắt Mèo CHốn Tia UV400 Phong Cách Hàn Quốc"
+            android:layout_below="@+id/anh_SanPham"/>
+
+        <TextView
+            android:id="@+id/tv_Gia1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ThongTinSP"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="10dp"
+            android:text="đ49.607"
+            android:textStyle="normal" />
+        <TextView
+            android:id="@+id/tv_Gia2"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/tv_Gia1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#F34913"
+            android:layout_marginBottom="10dp"
+            android:text="đ25.795"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_addshop"
+            android:layout_alignBottom="@id/tv_Gia2"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>

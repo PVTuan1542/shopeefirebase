@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C80A0A">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/topLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="290dp">
+
+                <ImageView
+                    android:id="@+id/anhTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:src="@drawable/anhtop" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/cogihot" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_Menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topLayout2"
+
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1" />
+
+            <ImageView
+                android:id="@+id/voucher"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_below="@id/recyclerview_Menu"
+                android:src="@drawable/banner_vourcher" />
+
+            <ImageView
+                android:id="@+id/uudai"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@id/voucher"
+                android:layout_marginTop="-1dp"
+                android:background="#C80A0A"
+                android:src="@drawable/banner_uudai" />
+
+            <LinearLayout
+                android:id="@+id/layoutHoanXu"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/uudai"
+                android:background="#C80A0A"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="7.5dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:padding="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/anh_HoanXu"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="5dp"
+                        android:src="@drawable/hoanxu" />
+
+                    <TextView
+                        android:id="@+id/tv_ToanNganhHang"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/anh_HoanXu"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Toàn Ngành Hàng"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                    <TextView
+
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu"
+                        android:text="Hoàn 12% xu"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu"
+                        android:text="Đơn tối thiểu đ0"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu"
+                        android:background="@drawable/rectangle_orange"
+                        android:padding="2dp"
+                        android:text="Gian hàng Hoàn Xu"
+                        android:textColor="#DF3702"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu"
+                        android:background="@color/orange"
+                        android:padding="2dp"
+                        android:text="Mua ngay"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv4"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Điều Kiện"
+                        android:textColor="#1363A3"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:padding="10dp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/anh_HoanXu2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="5dp"
+
+                        android:src="@drawable/hoanxu" />
+
+
+                    <TextView
+                        android:id="@+id/tv_ToanNganhHang2"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/anh_HoanXu2"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="5dp"
+                        android:text="Toàn Ngành Hàng"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+
+                    <TextView
+
+                        android:id="@+id/tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu2"
+                        android:text="Hoàn 8% xu"
+                        android:textColor="#000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv6"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu2"
+                        android:text="Đơn tối thiểu đ500k"
+                        android:textColor="#000"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv7"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu2"
+                        android:background="@drawable/rectangle_orange"
+                        android:padding="2dp"
+                        android:text="Gian hàng Hoàn Xu"
+                        android:textColor="#DF3702"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv8"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_toRightOf="@+id/anh_HoanXu2"
+                        android:background="@color/orange"
+                        android:padding="2dp"
+                        android:text="Mua ngay"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv9"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:text="Điều Kiện"
+                        android:textColor="#1363A3"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutHuongDan"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/layoutHoanXu"
+                android:background="#C80A0A">
+
+                <TextView
+                    android:id="@+id/tv_HDUuDai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/border_white"
+                    android:padding="10dp"
+                    android:text="Hướng Dẫn Ưu Đãi Từ Chương Trình Hoàn Xu Xtra"
+                    android:textAlignment="center"
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tv_HDUuDai"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/airpay" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAirPay"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/layoutHuongDan"
+                android:background="#C80A0A"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="#fff">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutAirpay0"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#03A9F4">
+
+                        <ImageView
+                            android:id="@+id/airpay"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:background="#03A9F4"
+                            android:src="@drawable/logo_airpay" />
+
+                        <TextView
+                            android:id="@+id/tv_AirPay"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/airpay"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="0dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:text="AirPay"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/layoutAirpay0"
+                        android:padding="5dp">
+
+                        <TextView
+
+                            android:id="@+id/tv12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Hoàn 12% xu"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv12"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Đơn tối thiểu đ0"
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv13"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/border_blue"
+                            android:padding="2dp"
+                            android:text="Thanh toán AirPay"
+                            android:textColor="#1487E3"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv15"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_below="@id/tv14"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/orange"
+                            android:text="Lưu"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv15"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:text="Điều Kiện"
+                            android:textColor="#1363A3"
+                            android:textSize="11sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="#fff">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutAirpay1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#03A9F4">
+
+                        <ImageView
+                            android:id="@+id/airpay1"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:background="#03A9F4"
+                            android:src="@drawable/logo_airpay" />
+
+                        <TextView
+                            android:id="@+id/tv_AirPay1"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/airpay1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="0dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="5dp"
+                            android:text="AirPay"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/layoutAirpay1"
+                        android:padding="5dp">
+
+                        <TextView
+
+                            android:id="@+id/tv20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Hoàn 12% xu"
+                            android:textColor="#000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv20"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Đơn tối thiểu đ0"
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv21"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/border_blue"
+                            android:padding="2dp"
+                            android:text="Thanh toán AirPay"
+                            android:textColor="#1487E3"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv23"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_below="@id/tv22"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/orange"
+                            android:gravity="center"
+                            android:text="Lưu"
+                            android:textAllCaps="false"
+                            android:textColor="#fff"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv24"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv23"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="4dp"
+                            android:text="Điều Kiện"
+                            android:textColor="#1363A3"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_MotKhongHai"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_below="@+id/layoutAirPay"
+                android:src="@drawable/mk2" />
+
+            <ImageView
+                android:id="@+id/thoiTrangCuoiNam"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/img_MotKhongHai"
+                android:src="@drawable/fashion" />
+
+            <TextView
+                android:id="@+id/xemThem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thoiTrangCuoiNam"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:background="#C80A0A"
+                android:padding="5dp"
+                android:drawableEnd="@drawable/ic_next"
+                android:text="Xem tất cả"
+                android:textColor="#fff" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_ThoiTrangCuoiNam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xemThem"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/top_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            app:tint="@color/orange"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="HÀNG QUỐC TẾ"
+            android:textColor="#0B0000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            app:tint="@color/orange"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_more" />
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/more"
+            app:tint="@color/orange"
+            android:src="@drawable/ic_cart" />
+    </RelativeLayout>
+</RelativeLayout>
